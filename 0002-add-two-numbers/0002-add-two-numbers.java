@@ -13,19 +13,7 @@ class Solution {
         
         return (add(l1,l2));
     }
-   /* public ListNode reverse(ListNode l1)
-    {
-        ListNode temp=l1;
-        ListNode p=null;
-        while(l1!=null)
-        {
-            temp=l1.next;
-            l1.next=p;
-            p=l1;
-            l1=temp;
-        }
-        return p;
-    }*/
+  
     public ListNode add(ListNode l1,ListNode l2)
     {
         int sum=0,c=0;
@@ -49,7 +37,7 @@ class Solution {
             {
                 l3.val=sum%10;
                 c=1;
-               // l3 = l3.next;
+               
             }
             else
             {
