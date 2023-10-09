@@ -19,20 +19,12 @@ class Solution {
             return 0;
         }
         int sum=0;
-        if(root.left!=null)
+        if(root.left!=null && root.left.left==null &&root.left.right==null)
         {
-            if(root.left.left==null &&root.left.right==null)
-            {
-                sum+= root.left.val;
-                sumOfLeftLeaves(root.left);
-
-            }
-            else
-            {
-                sum+=sumOfLeftLeaves(root.left);
-            }
-
-        }
+            sum+= root.left.val;
+            sumOfLeftLeaves(root.left);
+        }     
+        sum+=sumOfLeftLeaves(root.left);
         sum+=sumOfLeftLeaves(root.right);
 
         
