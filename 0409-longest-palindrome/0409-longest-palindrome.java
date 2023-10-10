@@ -11,21 +11,16 @@ class Solution {
                 s1.put(s.charAt(i),1);
             }
         }
-        int count=0;
-        boolean odd=false;
+        int odd=-1;
         for(char i:s1.keySet())
         {
             int freq=s1.get(i);
-            if(freq%2==0)
+            if(freq%2!=0)
             {
-                count+=freq;
-            }
-            else
-            {
-                count+=freq-1;
-                odd=true;
+                odd++;
+                
             }
         }
-        return odd?count+1:count;
+        return odd>0?s.length()-odd:s.length();
     }
 }
