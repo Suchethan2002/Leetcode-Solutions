@@ -15,7 +15,7 @@ class Solution {
         boolean odd=false;
         for(char i:s1.keySet())
         {
-            if((int)s1.get(i)%2==0)
+            if(s1.get(i)%2==0)
             {
                 count+=s1.get(i);
             }
@@ -25,10 +25,6 @@ class Solution {
                 odd=true;
             }
         }
-        if(odd)
-        {
-            return count+1;
-        }
-        return count;
+        return odd?count+1:count;
     }
 }
