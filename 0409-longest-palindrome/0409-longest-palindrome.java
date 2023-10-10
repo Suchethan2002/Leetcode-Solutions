@@ -15,13 +15,14 @@ class Solution {
         boolean odd=false;
         for(char i:s1.keySet())
         {
-            if(s1.get(i)%2==0)
+            int freq=s1.get(i);
+            if(freq%2==0)
             {
-                count+=s1.get(i);
+                count+=freq;
             }
             else
             {
-                count+=s1.get(i)-1;
+                count+=freq-1;
                 odd=true;
             }
         }
