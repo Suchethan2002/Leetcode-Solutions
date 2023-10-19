@@ -16,7 +16,6 @@ class Solution {
         for(int i=0;i<nums.size();i++)
         {
             int a=setBits((i));
-            System.out.println(nums.get(i)+""+a);
             if(a==k)
             {
                 ans+=nums.get(i);
